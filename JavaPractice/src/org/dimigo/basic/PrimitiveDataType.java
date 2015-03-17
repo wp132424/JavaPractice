@@ -19,6 +19,7 @@ public class PrimitiveDataType {
 		System.out.println("키 :" +height);
 		System.out.println("몸무게 :"+weight);
 		System.out.println("혈액형 :" +bloodtype);
+		//code 
 	}
 	
 }
