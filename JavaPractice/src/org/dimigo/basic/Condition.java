@@ -7,7 +7,15 @@ public class Condition {
 		int distance =10;
 		String model= "경차";
 		int pay;
-		int A=(distance/10);
+		int tax=200;
+		int multi;
+		int A=(distance%10);
+		
+		if(A!=0)
+			multi=(distance/10);
+		else
+			multi=(distance/10)-1;
+			
 		
 		
 		
@@ -17,6 +25,7 @@ public class Condition {
 			break;
 		case "고속버스":
 			pay=850;
+			tax=300;
 			break;
 		default:
 			pay =600;
@@ -24,7 +33,8 @@ public class Condition {
 			
 		}
 		
-		pay = pay*A;
+		pay+= tax*multi;
+		
 		
 		System.out.println("<<<고속도로 통행료 계산>>>");
 		System.out.println("거리: " +distance +"km");
